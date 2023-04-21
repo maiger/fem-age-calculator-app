@@ -1,0 +1,147 @@
+@import "./breakpoints.scss";
+@import "./setup.scss";
+
+html {
+  @include md {
+    font-size: 50%;
+  }
+
+  @include sm {
+    font-size: 45%;
+  }
+}
+
+body {
+  background-color: var(--color-neutral-grey-1);
+}
+
+.container {
+  width: 65rem;
+  background-color: var(--color-neutral-white);
+  padding: 4rem;
+  border-radius: 10px 10px 10rem 10px;
+
+  @include sm {
+    width: 45rem;
+    margin: 1rem;
+    padding: 3rem;
+  }
+}
+
+.date {
+  &__inputs {
+    display: flex;
+
+    @include sm {
+      justify-content: center;
+    }
+  }
+
+  &__input-wrapper {
+    margin-right: 3rem;
+
+    @include sm {
+      margin: 1rem;
+    }
+
+    label {
+      display: block;
+      font-size: 1.6rem;
+      color: var(--color-neutral-grey-3);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 1rem;
+    }
+
+    input {
+      font-size: var(--text-para-size);
+      font-weight: var(--text-weight-bold);
+      padding: 1rem;
+      width: 12rem;
+      outline: 1px solid transparent;
+      border: 1px solid var(--color-neutral-grey-2);
+      border-radius: 5px;
+
+      &:focus-visible {
+        outline-color: var(--color-primary-1);
+      }
+    }
+
+    .error {
+      font-size: 1.1rem;
+      font-weight: var(--text-weight-regular);
+      font-style: italic;
+      color: var(--color-primary-2);
+      margin-top: 1rem;
+    }
+  }
+
+  &__submit-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    @include sm {
+      height: 16rem;
+    }
+  }
+
+  &__line {
+    height: 1px;
+    width: 100%;
+    border: 1px solid var(--color-neutral-grey-2);
+  }
+
+  &__submit {
+    border: none;
+    background-color: var(--color-primary-1);
+    height: 8rem;
+    width: 9rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+    @include sm {
+      width: 8rem;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    img {
+      width: 50%;
+    }
+
+    &:hover {
+      background-color: var(--color-neutral-grey-4);
+    }
+  }
+}
+.age {
+  &__wrapper {
+    font-size: var(--text-heading-size-1);
+    font-style: italic;
+    font-weight: var(--text-weight-extrabold);
+    line-height: 1.2;
+
+    @include md {
+      font-size: 6rem;
+    }
+
+    span {
+      color: var(--color-primary-1);
+    }
+  }
+}
+
+.error-color {
+  color: var(--color-primary-2) !important;
+}
+
+.error-input {
+  border-color: var(--color-primary-2) !important;
+}
+
+.hidden {
+  display: none !important;
+}

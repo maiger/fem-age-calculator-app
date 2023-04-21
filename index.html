@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Age calculator app</title>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <main>
+      <section class="container">
+        <form action="#" class="date__form-wrapper">
+          <div class="date__inputs">
+            <div class="date__day date__input-wrapper">
+              <label for="day-input">Day</label>
+              <input type="number" placeholder="DD" min="0" />
+              <p class="error hidden">Error</p>
+            </div>
+            <div class="date__month date__input-wrapper">
+              <label for="month-input">Month</label>
+              <input type="number" placeholder="MM" min="0" />
+              <p class="error hidden">Error</p>
+            </div>
+            <div class="date__year date__input-wrapper">
+              <label for="year-input">Year</label>
+              <input type="number" placeholder="YYYY" min="0" />
+              <p class="error hidden">Error</p>
+            </div>
+          </div>
+          <div class="date__submit-wrapper">
+            <div class="date__line"></div>
+            <button class="date__submit">
+              <img src="assets/images/icon-arrow.svg" alt="" />
+            </button>
+          </div>
+        </form>
+        <div class="age__wrapper">
+          <div class="age__years"><span>--</span> years</div>
+          <div class="age__months"><span>--</span> months</div>
+          <div class="age__days"><span>--</span> days</div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Me</a>.
+      </div>
+    </footer>
+    <script src="main.js"></script>
+  </body>
+</html>

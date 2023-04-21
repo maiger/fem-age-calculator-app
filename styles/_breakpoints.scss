@@ -1,0 +1,55 @@
+// Breakpoint variables
+// Extra small devices (Small mobile)
+$screen-xs-max: 450px;
+
+// Small devices (Mobile)
+$screen-sm-max: 550px;
+
+// Medium devices (Tablet)
+$screen-md-max: 700px;
+
+// Large devices (Small desktop, laptops)
+$screen-lg-max: 1000px;
+
+// Extra large devices (Desktops, HD laptops)
+$screen-xl-max: 1440px;
+
+// Custom
+$screen-cs-max: 850px;
+
+// Breakpoint mixins
+@mixin xs {
+  @media (max-width: #{$screen-xs-max}) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (max-width: #{$screen-sm-max}) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (max-width: #{$screen-md-max}) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (max-width: #{$screen-lg-max}) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (max-width: #{$screen-xl-max}) {
+    @content;
+  }
+}
+
+@mixin cs {
+  @media (max-width: #{$screen-cs-max}) {
+    @content;
+  }
+}

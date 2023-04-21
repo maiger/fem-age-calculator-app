@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap");
+/* ---------- RESET ---------- */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* ---------- VARIABLES ---------- */
+:root {
+  /* COLORS */
+  /* PRIMARY */
+  --color-primary-1: hsl(259, 100%, 65%);
+  --color-primary-2: hsl(0, 100%, 67%);
+  /* NEUTRAL */
+  --color-neutral-white: hsl(0, 0%, 100%);
+  --color-neutral-grey-1: hsl(0, 0%, 94%);
+  --color-neutral-grey-2: hsl(0, 0%, 86%);
+  --color-neutral-grey-3: hsl(0, 1%, 44%);
+  --color-neutral-grey-4: hsl(0, 0%, 8%);
+  /* TEXT */
+  --text-heading-size-1: 8rem;
+  --text-para-size: 3.2rem;
+  --text-sans-serif-font: "Poppins", sans-serif;
+  --text-weight-regular: 400;
+  --text-weight-bold: 700;
+  --text-weight-extrabold: 800;
+}
+
+/* ---------- BASE STYLES ---------- */
+body {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  font-family: var(--text-sans-serif-font);
+  font-weight: var(--text-weight-regular);
+  font-size: var(--text-para-size);
+}
+
+footer {
+  margin-top: 5rem;
+}
+footer .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+footer .attribution a {
+  color: hsl(228, 100%, 87%);
+}
+@media (max-width: 1000px) {
+  footer {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  html {
+    font-size: 50%;
+  }
+}
+@media (max-width: 550px) {
+  html {
+    font-size: 45%;
+  }
+}
+
+body {
+  background-color: var(--color-neutral-grey-1);
+}
+
+.container {
+  width: 65rem;
+  background-color: var(--color-neutral-white);
+  padding: 4rem;
+  border-radius: 10px 10px 10rem 10px;
+}
+@media (max-width: 550px) {
+  .container {
+    width: 45rem;
+    margin: 1rem;
+    padding: 3rem;
+  }
+}
+
+.date__inputs {
+  display: flex;
+}
+@media (max-width: 550px) {
+  .date__inputs {
+    justify-content: center;
+  }
+}
+.date__input-wrapper {
+  margin-right: 3rem;
+}
+@media (max-width: 550px) {
+  .date__input-wrapper {
+    margin: 1rem;
+  }
+}
+.date__input-wrapper label {
+  display: block;
+  font-size: 1.6rem;
+  color: var(--color-neutral-grey-3);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+.date__input-wrapper input {
+  font-size: var(--text-para-size);
+  font-weight: var(--text-weight-bold);
+  padding: 1rem;
+  width: 12rem;
+  outline: 1px solid transparent;
+  border: 1px solid var(--color-neutral-grey-2);
+  border-radius: 5px;
+}
+.date__input-wrapper input:focus-visible {
+  outline-color: var(--color-primary-1);
+}
+.date__input-wrapper .error {
+  font-size: 1.1rem;
+  font-weight: var(--text-weight-regular);
+  font-style: italic;
+  color: var(--color-primary-2);
+  margin-top: 1rem;
+}
+.date__submit-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+@media (max-width: 550px) {
+  .date__submit-wrapper {
+    height: 16rem;
+  }
+}
+.date__line {
+  height: 1px;
+  width: 100%;
+  border: 1px solid var(--color-neutral-grey-2);
+}
+.date__submit {
+  border: none;
+  background-color: var(--color-primary-1);
+  height: 8rem;
+  width: 9rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+@media (max-width: 550px) {
+  .date__submit {
+    width: 8rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+.date__submit img {
+  width: 50%;
+}
+.date__submit:hover {
+  background-color: var(--color-neutral-grey-4);
+}
+
+.age__wrapper {
+  font-size: var(--text-heading-size-1);
+  font-style: italic;
+  font-weight: var(--text-weight-extrabold);
+  line-height: 1.2;
+}
+@media (max-width: 700px) {
+  .age__wrapper {
+    font-size: 6rem;
+  }
+}
+.age__wrapper span {
+  color: var(--color-primary-1);
+}
+
+.error-color {
+  color: var(--color-primary-2) !important;
+}
+
+.error-input {
+  border-color: var(--color-primary-2) !important;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/*# sourceMappingURL=style.css.map */
